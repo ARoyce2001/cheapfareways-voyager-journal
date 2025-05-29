@@ -1,4 +1,3 @@
-
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
@@ -163,7 +162,7 @@ const Blog = () => {
   const regularPosts = blogPosts.slice(1);
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-50 to-blue-50">
+    <div className="min-h-screen bg-gradient-to-br from-slate-100 via-blue-50 to-indigo-100">
       <Header />
       
       {/* Video Slideshow Hero Section */}
@@ -285,7 +284,7 @@ const Blog = () => {
       </section>
 
       {/* Category Filter */}
-      <section className="py-8 bg-white/50 backdrop-blur-sm border-y border-white/20">
+      <section className="py-8 bg-white/70 backdrop-blur-sm border-y border-white/30">
         <div className="container mx-auto px-4">
           <div className="flex flex-wrap gap-3 justify-center">
             {categories.map((category) => (
@@ -371,7 +370,7 @@ const Blog = () => {
       </section>
 
       {/* Newsletter Signup */}
-      <section className="py-20 bg-gradient-to-r from-gray-800 via-gray-900 to-black relative overflow-hidden">
+      <section className="py-20 bg-gradient-to-r from-slate-800 via-gray-900 to-slate-800 relative overflow-hidden">
         <div className="absolute inset-0 bg-black/20"></div>
         <div className="container mx-auto px-4 relative z-10">
           <div className="text-center max-w-3xl mx-auto">

@@ -8,7 +8,7 @@ const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
   return (
-    <header className="bg-white shadow-sm sticky top-0 z-50">
+    <header className="bg-gray-900 shadow-lg sticky top-0 z-50">
       <div className="container mx-auto px-4 py-4">
         <div className="flex items-center justify-between">
           {/* Logo */}
@@ -22,22 +22,22 @@ const Header = () => {
 
           {/* Desktop Navigation */}
           <nav className="hidden md:flex items-center space-x-8">
-            <Link to="/" className="text-gray-700 hover:text-blue-600 transition-colors">
+            <Link to="/" className="text-gray-300 hover:text-white transition-colors">
               Home
             </Link>
-            <Link to="/blog" className="text-gray-700 hover:text-blue-600 transition-colors">
+            <Link to="/blog" className="text-gray-300 hover:text-white transition-colors">
               Travel Blog
             </Link>
             <div className="relative group">
-              <button className="flex items-center text-gray-700 hover:text-blue-600 transition-colors">
+              <button className="flex items-center text-gray-300 hover:text-white transition-colors">
                 Destinations
                 <ChevronDown className="ml-1 h-4 w-4" />
               </button>
-              <div className="absolute top-full left-0 mt-2 w-48 bg-white shadow-lg rounded-lg opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200">
+              <div className="absolute top-full left-0 mt-2 w-48 bg-gray-800 shadow-lg rounded-lg opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 border border-gray-700">
                 <div className="py-2">
-                  <a href="#" className="block px-4 py-2 text-gray-700 hover:bg-blue-50">India</a>
-                  <a href="#" className="block px-4 py-2 text-gray-700 hover:bg-blue-50">International</a>
-                  <a href="#" className="block px-4 py-2 text-gray-700 hover:bg-blue-50">Popular Routes</a>
+                  <a href="#" className="block px-4 py-2 text-gray-300 hover:bg-gray-700 hover:text-white">India</a>
+                  <a href="#" className="block px-4 py-2 text-gray-300 hover:bg-gray-700 hover:text-white">International</a>
+                  <a href="#" className="block px-4 py-2 text-gray-300 hover:bg-gray-700 hover:text-white">Popular Routes</a>
                 </div>
               </div>
             </div>
@@ -52,9 +52,9 @@ const Header = () => {
             onClick={() => setIsMenuOpen(!isMenuOpen)}
           >
             <div className="w-6 h-6 flex flex-col justify-center">
-              <span className={`h-0.5 w-6 bg-gray-700 transition-all ${isMenuOpen ? 'rotate-45 translate-y-1' : ''}`}></span>
-              <span className={`h-0.5 w-6 bg-gray-700 transition-all mt-1 ${isMenuOpen ? 'opacity-0' : ''}`}></span>
-              <span className={`h-0.5 w-6 bg-gray-700 transition-all mt-1 ${isMenuOpen ? '-rotate-45 -translate-y-1' : ''}`}></span>
+              <span className={`h-0.5 w-6 bg-gray-300 transition-all ${isMenuOpen ? 'rotate-45 translate-y-1' : ''}`}></span>
+              <span className={`h-0.5 w-6 bg-gray-300 transition-all mt-1 ${isMenuOpen ? 'opacity-0' : ''}`}></span>
+              <span className={`h-0.5 w-6 bg-gray-300 transition-all mt-1 ${isMenuOpen ? '-rotate-45 -translate-y-1' : ''}`}></span>
             </div>
           </button>
         </div>
@@ -63,9 +63,9 @@ const Header = () => {
         {isMenuOpen && (
           <div className="md:hidden mt-4 pb-4">
             <div className="flex flex-col space-y-4">
-              <Link to="/" className="text-gray-700 hover:text-blue-600">Home</Link>
-              <Link to="/blog" className="text-gray-700 hover:text-blue-600">Travel Blog</Link>
-              <a href="#" className="text-gray-700 hover:text-blue-600">Destinations</a>
+              <Link to="/" className="text-gray-300 hover:text-white">Home</Link>
+              <Link to="/blog" className="text-gray-300 hover:text-white">Travel Blog</Link>
+              <a href="#" className="text-gray-300 hover:text-white">Destinations</a>
               <Button className="bg-gradient-to-r from-blue-600 to-purple-600 w-full">
                 Get Notified
               </Button>

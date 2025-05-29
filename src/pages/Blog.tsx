@@ -1,12 +1,39 @@
-
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
+import { Carousel, CarouselContent, CarouselItem, CarouselNext, CarouselPrevious } from "@/components/ui/carousel";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
-import { Clock, Calendar, ArrowRight, TrendingUp } from "lucide-react";
+import { Clock, Calendar, ArrowRight, TrendingUp, Play } from "lucide-react";
+import { useState } from "react";
 
 const Blog = () => {
+  const [currentVideo, setCurrentVideo] = useState(0);
+
+  const videoSlides = [
+    {
+      id: 1,
+      title: "Discover India's Hidden Gems",
+      subtitle: "Explore breathtaking destinations across incredible India",
+      videoUrl: "https://videos.pexels.com/video-files/4009252/4009252-uhd_2560_1440_30fps.mp4",
+      thumbnail: "https://images.unsplash.com/photo-1469474968028-56623f02e42e?w=1200&h=600&fit=crop&crop=center"
+    },
+    {
+      id: 2,
+      title: "Budget Travel Made Easy",
+      subtitle: "Find amazing deals and save on your next adventure",
+      videoUrl: "https://videos.pexels.com/video-files/4009252/4009252-uhd_2560_1440_30fps.mp4",
+      thumbnail: "https://images.unsplash.com/photo-1501854140801-50d01698950b?w=1200&h=600&fit=crop&crop=center"
+    },
+    {
+      id: 3,
+      title: "Monsoon Magic",
+      subtitle: "Experience India's beauty during the rainy season",
+      videoUrl: "https://videos.pexels.com/video-files/4009252/4009252-uhd_2560_1440_30fps.mp4",
+      thumbnail: "https://images.unsplash.com/photo-1500673922987-e212871fec22?w=1200&h=600&fit=crop&crop=center"
+    }
+  ];
+
   const blogPosts = [
     {
       id: 1,
@@ -78,27 +105,65 @@ const Blog = () => {
     <div className="min-h-screen bg-gradient-to-br from-slate-50 to-blue-50">
       <Header />
       
-      {/* Hero Section */}
-      <section className="relative bg-gradient-to-r from-blue-600 via-purple-600 to-blue-800 text-white py-20 overflow-hidden">
-        <div className="absolute inset-0 bg-black/20"></div>
-        <div className="absolute inset-0 bg-gradient-to-r from-blue-600/90 to-purple-600/90"></div>
-        <div className="container mx-auto px-4 relative z-10">
-          <div className="text-center max-w-4xl mx-auto">
-            <Badge className="mb-6 bg-white/20 text-white border-white/30 hover:bg-white/30">
-              Travel Insights & Tips
-            </Badge>
-            <h1 className="text-5xl md:text-6xl font-bold mb-6 leading-tight">
-              CheapFareways
-              <span className="block text-3xl md:text-4xl font-normal text-blue-100 mt-2">
-                Travel Blog
-              </span>
-            </h1>
-            <p className="text-xl md:text-2xl text-blue-100 max-w-3xl mx-auto leading-relaxed">
-              Your ultimate resource for travel tips, destination guides, and money-saving travel hacks
-            </p>
-          </div>
+      {/* Video Slideshow Hero Section */}
+      <section className="relative bg-gray-900 text-white overflow-hidden">
+        <div className="absolute inset-0 bg-black/40 z-10"></div>
+        
+        <Carousel className="relative">
+          <CarouselContent>
+            {videoSlides.map((slide, index) => (
+              <CarouselItem key={slide.id}>
+                <div className="relative h-[70vh] flex items-center justify-center">
+                  {/* Video Background */}
+                  <div className="absolute inset-0">
+                    <video
+                      className="w-full h-full object-cover"
+                      autoPlay
+                      muted
+                      loop
+                      playsInline
+                      poster={slide.thumbnail}
+                    >
+                      <source src={slide.videoUrl} type="video/mp4" />
+                      <img src={slide.thumbnail} alt={slide.title} className="w-full h-full object-cover" />
+                    </video>
+                  </div>
+                  
+                  {/* Content Overlay */}
+                  <div className="relative z-20 text-center max-w-4xl mx-auto px-4">
+                    <Badge className="mb-6 bg-white/20 text-white border-white/30 hover:bg-white/30 backdrop-blur-sm">
+                      <Play className="h-3 w-3 mr-1" />
+                      Travel Insights & Tips
+                    </Badge>
+                    <h1 className="text-5xl md:text-6xl font-bold mb-6 leading-tight">
+                      {slide.title}
+                    </h1>
+                    <p className="text-xl md:text-2xl text-blue-100 max-w-3xl mx-auto leading-relaxed">
+                      {slide.subtitle}
+                    </p>
+                  </div>
+                </div>
+              </CarouselItem>
+            ))}
+          </CarouselContent>
+          <CarouselPrevious className="left-4 bg-white/20 border-white/30 text-white hover:bg-white/30 backdrop-blur-sm" />
+          <CarouselNext className="right-4 bg-white/20 border-white/30 text-white hover:bg-white/30 backdrop-blur-sm" />
+        </Carousel>
+        
+        {/* Slide Indicators */}
+        <div className="absolute bottom-6 left-1/2 transform -translate-x-1/2 flex space-x-2 z-20">
+          {videoSlides.map((_, index) => (
+            <button
+              key={index}
+              className={`w-3 h-3 rounded-full transition-all duration-300 ${
+                index === currentVideo ? 'bg-white' : 'bg-white/50'
+              }`}
+              onClick={() => setCurrentVideo(index)}
+            />
+          ))}
         </div>
-        <div className="absolute bottom-0 left-0 right-0 h-20 bg-gradient-to-t from-slate-50 to-transparent"></div>
+        
+        <div className="absolute bottom-0 left-0 right-0 h-20 bg-gradient-to-t from-slate-50 to-transparent z-10"></div>
       </section>
 
       {/* Featured Post */}
@@ -245,7 +310,7 @@ const Blog = () => {
       </section>
 
       {/* Newsletter Signup */}
-      <section className="py-20 bg-gradient-to-r from-blue-600 via-purple-600 to-blue-800 relative overflow-hidden">
+      <section className="py-20 bg-gradient-to-r from-gray-800 via-gray-900 to-black relative overflow-hidden">
         <div className="absolute inset-0 bg-black/20"></div>
         <div className="container mx-auto px-4 relative z-10">
           <div className="text-center max-w-3xl mx-auto">

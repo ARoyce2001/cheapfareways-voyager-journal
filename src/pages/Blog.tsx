@@ -1,3 +1,4 @@
+
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
@@ -37,67 +38,127 @@ const Blog = () => {
   const blogPosts = [
     {
       id: 1,
-      title: "Top 10 Budget Travel Destinations in India for 2024",
-      excerpt: "Discover incredible destinations across India that won't break the bank. From the serene backwaters of Kerala to the majestic mountains of Himachal Pradesh.",
+      title: "Top 15 Budget Travel Destinations in India for 2025",
+      excerpt: "Discover incredible destinations across India that won't break the bank. From the serene backwaters of Kerala to the majestic mountains of Himachal Pradesh, explore places that offer maximum value for money.",
       image: "https://images.unsplash.com/photo-1469474968028-56623f02e42e?w=800&h=400&fit=crop&crop=center",
-      date: "Dec 28, 2024",
+      date: "Jan 15, 2025",
       category: "Destinations",
-      readTime: "5 min read",
+      readTime: "8 min read",
       trending: true
     },
     {
       id: 2,
-      title: "How to Find the Cheapest Flight Deals: Insider Tips",
-      excerpt: "Learn the secrets that travel experts use to find unbeatable flight prices. From booking timing to hidden city ticketing strategies.",
+      title: "How to Find the Cheapest Flight Deals: Ultimate Guide 2025",
+      excerpt: "Learn the secrets that travel experts use to find unbeatable flight prices. From booking timing to hidden city ticketing strategies, master the art of cheap flights.",
       image: "https://images.unsplash.com/photo-1482938289607-e9573fc25ebb?w=800&h=400&fit=crop&crop=center",
-      date: "Dec 25, 2024",
+      date: "Jan 12, 2025",
       category: "Travel Tips",
-      readTime: "7 min read",
+      readTime: "10 min read",
       trending: false
     },
     {
       id: 3,
-      title: "Solo Travel in India: A Complete Safety Guide",
-      excerpt: "Everything you need to know about traveling solo in India, from safety tips to the best solo-friendly destinations.",
+      title: "Solo Travel in India: Complete Safety Guide for 2025",
+      excerpt: "Everything you need to know about traveling solo in India, from safety tips to the best solo-friendly destinations. Includes updated guidelines for 2025.",
       image: "https://images.unsplash.com/photo-1501854140801-50d01698950b?w=800&h=400&fit=crop&crop=center",
-      date: "Dec 22, 2024",
+      date: "Jan 10, 2025",
       category: "Solo Travel",
-      readTime: "6 min read",
+      readTime: "12 min read",
       trending: true
     },
     {
       id: 4,
-      title: "Monsoon Travel: Best Places to Visit During Rainy Season",
-      excerpt: "Don't let the monsoon stop your travel plans. Discover beautiful destinations that come alive during the rainy season.",
+      title: "Monsoon Travel 2025: Best Places to Visit During Rainy Season",
+      excerpt: "Don't let the monsoon stop your travel plans. Discover beautiful destinations that come alive during the rainy season, with updated recommendations for 2025.",
       image: "https://images.unsplash.com/photo-1500673922987-e212871fec22?w=800&h=400&fit=crop&crop=center",
-      date: "Dec 20, 2024",
+      date: "Jan 8, 2025",
       category: "Seasonal Travel",
-      readTime: "4 min read",
+      readTime: "6 min read",
       trending: false
     },
     {
       id: 5,
-      title: "Digital Nomad Guide: Working While Traveling in India",
-      excerpt: "The ultimate guide for digital nomads exploring India. Best co-working spaces, reliable internet, and nomad-friendly cities.",
+      title: "Digital Nomad Guide: Working While Traveling in India 2025",
+      excerpt: "The ultimate guide for digital nomads exploring India. Best co-working spaces, reliable internet, and nomad-friendly cities with updated information for 2025.",
       image: "https://images.unsplash.com/photo-1472396961693-142e6e269027?w=800&h=400&fit=crop&crop=center",
-      date: "Dec 18, 2024",
+      date: "Jan 5, 2025",
       category: "Digital Nomad",
-      readTime: "8 min read",
+      readTime: "15 min read",
       trending: false
     },
     {
       id: 6,
-      title: "Weekend Getaways from Major Indian Cities",
-      excerpt: "Quick escape ideas for busy professionals. Discover amazing weekend destinations within 300km of major Indian cities.",
+      title: "Weekend Getaways from Major Indian Cities in 2025",
+      excerpt: "Quick escape ideas for busy professionals. Discover amazing weekend destinations within 300km of major Indian cities, including new routes for 2025.",
       image: "https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=800&h=400&fit=crop&crop=center",
-      date: "Dec 15, 2024",
+      date: "Jan 3, 2025",
       category: "Weekend Trips",
-      readTime: "5 min read",
+      readTime: "7 min read",
       trending: true
+    },
+    {
+      id: 7,
+      title: "Best Time to Visit Popular Indian Destinations in 2025",
+      excerpt: "A comprehensive month-by-month guide to planning your trips across India. Avoid crowds, bad weather, and high prices with our detailed calendar.",
+      image: "https://images.unsplash.com/photo-1517400508447-f8dd518b86db?w=800&h=400&fit=crop&crop=center",
+      date: "Dec 30, 2024",
+      category: "Travel Planning",
+      readTime: "9 min read",
+      trending: false
+    },
+    {
+      id: 8,
+      title: "Budget Hotels vs Hostels: What's Best for India Travel?",
+      excerpt: "Compare accommodation options across India. From luxury hostels to budget hotels, find the perfect stay that matches your travel style and budget.",
+      image: "https://images.unsplash.com/photo-1564501049412-61c2a3083791?w=800&h=400&fit=crop&crop=center",
+      date: "Dec 28, 2024",
+      category: "Accommodation",
+      readTime: "11 min read",
+      trending: false
+    },
+    {
+      id: 9,
+      title: "Food Safety Guide: Eating Like a Local in India",
+      excerpt: "Navigate India's incredible food scene safely. Learn which street foods to try, which to avoid, and how to enjoy authentic cuisine without getting sick.",
+      image: "https://images.unsplash.com/photo-1585937421612-70a008356fbe?w=800&h=400&fit=crop&crop=center",
+      date: "Dec 25, 2024",
+      category: "Food & Culture",
+      readTime: "8 min read",
+      trending: true
+    },
+    {
+      id: 10,
+      title: "Train Travel in India: Booking Hacks for 2025",
+      excerpt: "Master India's railway system with insider tips. Learn about new booking features, tatkal strategies, and how to secure confirmed tickets.",
+      image: "https://images.unsplash.com/photo-1544620347-c4fd4a3d5957?w=800&h=400&fit=crop&crop=center",
+      date: "Dec 22, 2024",
+      category: "Transportation",
+      readTime: "13 min read",
+      trending: false
+    },
+    {
+      id: 11,
+      title: "Photography Guide: Capturing India's Beauty",
+      excerpt: "Tips and techniques for photographing India's diverse landscapes, people, and culture. Includes camera settings and ethical photography guidelines.",
+      image: "https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=800&h=400&fit=crop&crop=center",
+      date: "Dec 20, 2024",
+      category: "Photography",
+      readTime: "10 min read",
+      trending: false
+    },
+    {
+      id: 12,
+      title: "Visa and Documentation Guide for India 2025",
+      excerpt: "Everything you need to know about visas, permits, and documentation for traveling in India. Updated with latest requirements and processes.",
+      image: "https://images.unsplash.com/photo-1436491865332-7a61a109cc05?w=800&h=400&fit=crop&crop=center",
+      date: "Dec 18, 2024",
+      category: "Travel Planning",
+      readTime: "14 min read",
+      trending: false
     }
   ];
 
-  const categories = ["All", "Destinations", "Travel Tips", "Solo Travel", "Seasonal Travel", "Digital Nomad", "Weekend Trips"];
+  const categories = ["All", "Destinations", "Travel Tips", "Solo Travel", "Seasonal Travel", "Digital Nomad", "Weekend Trips", "Travel Planning", "Accommodation", "Food & Culture", "Transportation", "Photography"];
   const featuredPost = blogPosts[0];
   const regularPosts = blogPosts.slice(1);
 
@@ -330,7 +391,7 @@ const Blog = () => {
                 </Button>
               </div>
               <p className="text-blue-100 text-sm mt-4 opacity-80">
-                Join 10,000+ travelers who trust CheapFareways for the best deals
+                Join 15,000+ travelers who trust CheapFareways for the best deals
               </p>
             </div>
           </div>

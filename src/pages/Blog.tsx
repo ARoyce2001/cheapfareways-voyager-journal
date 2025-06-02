@@ -9,8 +9,8 @@ const Blog = () => {
     id: 1,
     title: "Top 10 Budget Travel Destinations in India for 2025",
     excerpt: "Discover incredible destinations across India that won't break the bank. From hidden hill stations to pristine beaches, explore the most affordable yet stunning places to visit this year.",
-    image: "https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=800&h=400&fit=crop&crop=center",
-    date: "December 15, 2024",
+    image: "https://images.unsplash.com/photo-1524492412937-b28074a5d7da?w=800&h=400&fit=crop&crop=center",
+    date: "May 15, 2025",
     category: "Budget Travel",
     location: "India",
     readTime: "8 min read",
@@ -26,7 +26,7 @@ const Blog = () => {
       title: "A Trekker's Guide to India's Best Mountain Trails",
       excerpt: "Explore the most breathtaking mountain trails across the Himalayas, Western Ghats, and Eastern ranges with detailed guides and safety tips.",
       image: "https://images.unsplash.com/photo-1464822759844-d150baec93c5?w=800&h=400&fit=crop&crop=center",
-      date: "December 12, 2024",
+      date: "May 12, 2025",
       category: "Adventure",
       readTime: "12 min read",
       author: "Arjun Patel",
@@ -37,7 +37,7 @@ const Blog = () => {
       title: "India's Top Five Scenic Road Trips",
       excerpt: "Journey through India's most picturesque routes from Leh-Ladakh to Kerala's backwaters, with complete itineraries and hidden gems.",
       image: "https://images.unsplash.com/photo-1469474968028-56623f02e42e?w=800&h=400&fit=crop&crop=center",
-      date: "December 10, 2024",
+      date: "May 10, 2025",
       category: "Travel Guides",
       readTime: "10 min read",
       author: "Neha Gupta",
@@ -48,7 +48,7 @@ const Blog = () => {
       title: "Smart Travel: Best Apps for Your Next Trip",
       excerpt: "Essential mobile apps that every traveler needs in 2025, from booking to navigation, translation, and discovering local experiences.",
       image: "https://images.unsplash.com/photo-1501854140801-50d01698950b?w=800&h=400&fit=crop&crop=center",
-      date: "December 8, 2024",
+      date: "May 8, 2025",
       category: "Travel Guides",
       readTime: "6 min read",
       author: "Rohit Singh",
@@ -59,7 +59,7 @@ const Blog = () => {
       title: "The Ultimate Guide to India's Beach Destinations",
       excerpt: "Discover pristine coastlines and hidden beach gems across India's extensive shoreline, from Goa's party beaches to Andaman's crystal waters.",
       image: "https://images.unsplash.com/photo-1506197603052-3cc9c3a201bd?w=800&h=400&fit=crop&crop=center",
-      date: "December 5, 2024",
+      date: "May 5, 2025",
       category: "Travel Guides",
       readTime: "15 min read",
       author: "Kavya Reddy",
@@ -70,7 +70,7 @@ const Blog = () => {
       title: "Street Food Adventures: Delhi to Mumbai",
       excerpt: "A culinary journey through India's street food capitals, featuring must-try dishes, best locations, and food safety tips for travelers.",
       image: "https://images.unsplash.com/photo-1555939594-58d7cb561ad1?w=800&h=400&fit=crop&crop=center",
-      date: "December 3, 2024",
+      date: "May 3, 2025",
       category: "Food & Drink",
       readTime: "9 min read",
       author: "Vikram Kumar",
@@ -81,7 +81,7 @@ const Blog = () => {
       title: "Photography Guide: Capturing India's Festivals",
       excerpt: "Master the art of festival photography with expert tips on capturing the vibrant colors, emotions, and traditions of India's celebrations.",
       image: "https://images.unsplash.com/photo-1578662996442-48f60103fc96?w=800&h=400&fit=crop&crop=center",
-      date: "December 1, 2024",
+      date: "May 1, 2025",
       category: "Photography",
       readTime: "11 min read",
       author: "Anisha Das",
@@ -92,7 +92,7 @@ const Blog = () => {
       title: "Solo Female Travel in India: Complete Safety Guide",
       excerpt: "Comprehensive guide for solo female travelers with safety tips, recommended destinations, and cultural insights for a confident journey.",
       image: "https://images.unsplash.com/photo-1544735716-392fe2489ffa?w=800&h=400&fit=crop&crop=center",
-      date: "November 28, 2024",
+      date: "April 28, 2025",
       category: "Solo Travel",
       readTime: "13 min read",
       author: "Meera Joshi",
@@ -103,7 +103,7 @@ const Blog = () => {
       title: "Monsoon Magic: Best Places to Visit During Rains",
       excerpt: "Embrace the monsoon season with our guide to India's most beautiful destinations that come alive during the rains.",
       image: "https://images.unsplash.com/photo-1469474968028-56623f02e42e?w=800&h=400&fit=crop&crop=center",
-      date: "November 25, 2024",
+      date: "April 25, 2025",
       category: "Travel Guides",
       readTime: "8 min read",
       author: "Rajesh Mehta",
@@ -114,7 +114,7 @@ const Blog = () => {
       title: "Cultural Immersion: Living with Local Families",
       excerpt: "Experience authentic India through homestays and cultural exchanges that offer deep insights into local traditions and lifestyles.",
       image: "https://images.unsplash.com/photo-1524492412937-b28074a5d7da?w=800&h=400&fit=crop&crop=center",
-      date: "November 22, 2024",
+      date: "April 22, 2025",
       category: "Culture",
       readTime: "14 min read",
       author: "Sanjana Iyer",
@@ -125,7 +125,7 @@ const Blog = () => {
       title: "Budget Backpacking: ₹1000 Per Day Travel Guide",
       excerpt: "Learn how to travel across India on a shoestring budget with practical tips on accommodation, food, and transportation.",
       image: "https://images.unsplash.com/photo-1488646953014-85cb44e25828?w=800&h=400&fit=crop&crop=center",
-      date: "November 20, 2024",
+      date: "April 20, 2025",
       category: "Budget Travel",
       readTime: "16 min read",
       author: "Karan Malhotra",
@@ -136,7 +136,7 @@ const Blog = () => {
       title: "Adventure Sports in India: Ultimate Adrenaline Guide",
       excerpt: "From white water rafting in Rishikesh to paragliding in Himachal, discover India's best adventure sports destinations.",
       image: "https://images.unsplash.com/photo-1551698618-1dfe5d97d256?w=800&h=400&fit=crop&crop=center",
-      date: "November 18, 2024",
+      date: "April 18, 2025",
       category: "Adventure",
       readTime: "12 min read",
       author: "Deepak Sharma",
@@ -145,22 +145,22 @@ const Blog = () => {
   ];
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-gray-900 via-gray-800 to-black text-white">
+    <div className="min-h-screen bg-black text-white">
       <Header />
       
       {/* Hero Section */}
-      <section className="relative bg-gradient-to-br from-gray-900 via-purple-900/20 to-blue-900/20 text-white overflow-hidden py-24">
+      <section className="relative bg-black text-white overflow-hidden py-24">
         <div className="absolute inset-0">
           <img 
             src="https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=1920&h=800&fit=crop&crop=center"
             alt="India's Hidden Gems"
-            className="w-full h-full object-cover opacity-30"
+            className="w-full h-full object-cover opacity-15"
           />
-          <div className="absolute inset-0 bg-gradient-to-b from-gray-900/90 via-gray-900/70 to-gray-900/90"></div>
+          <div className="absolute inset-0 bg-black/80 backdrop-blur-sm"></div>
         </div>
         
         <div className="relative z-10 container mx-auto px-4 text-center">
-          <div className="inline-block px-4 py-2 bg-yellow-600/20 backdrop-blur-sm rounded-full border border-yellow-600/30 mb-6">
+          <div className="inline-block px-4 py-2 bg-yellow-600/30 backdrop-blur-md rounded-full border border-yellow-600/50 mb-6">
             <span className="text-yellow-300 font-medium">Travel Blog</span>
           </div>
           <h1 className="text-5xl md:text-7xl font-light text-white mb-6 leading-tight">
@@ -174,14 +174,14 @@ const Blog = () => {
       </section>
 
       {/* Featured Article */}
-      <section className="py-20 bg-gray-900/50">
+      <section className="py-20 bg-black/90 backdrop-blur-sm">
         <div className="container mx-auto px-4">
           <div className="flex items-center gap-3 mb-12">
             <div className="w-1 h-8 bg-yellow-600"></div>
             <h2 className="text-3xl font-light text-white">Featured Article</h2>
           </div>
           
-          <div className="group bg-gradient-to-br from-gray-800/50 to-gray-900/50 backdrop-blur-sm rounded-2xl border border-gray-700/50 overflow-hidden hover:border-yellow-600/30 transition-all duration-500 hover:transform hover:scale-[1.02]">
+          <div className="group bg-gray-900/40 backdrop-blur-md rounded-2xl border border-gray-700/40 overflow-hidden hover:border-yellow-600/40 transition-all duration-500 hover:transform hover:scale-[1.02]">
             <div className="flex flex-col lg:flex-row">
               <div className="lg:w-1/2 relative overflow-hidden">
                 <img 
@@ -197,7 +197,7 @@ const Blog = () => {
               </div>
               <div className="lg:w-1/2 p-8 lg:p-12 flex flex-col justify-center">
                 <div className="flex items-center gap-4 text-sm text-gray-400 mb-4">
-                  <span className="px-3 py-1 bg-gray-700/50 rounded-full">{featuredPost.category}</span>
+                  <span className="px-3 py-1 bg-gray-800/60 backdrop-blur-sm rounded-full">{featuredPost.category}</span>
                   <div className="flex items-center gap-1">
                     <Calendar className="w-4 h-4" />
                     <span>{featuredPost.date}</span>
@@ -236,7 +236,7 @@ const Blog = () => {
       </section>
 
       {/* Browse Topics */}
-      <section className="py-20 border-t border-gray-800/50">
+      <section className="py-20 border-t border-gray-800/30">
         <div className="container mx-auto px-4">
           <div className="flex items-center gap-3 mb-12">
             <div className="w-1 h-8 bg-yellow-600"></div>
@@ -248,7 +248,7 @@ const Blog = () => {
               <Button
                 key={category}
                 variant="outline"
-                className="bg-gray-800/30 backdrop-blur-sm border-gray-600/50 text-gray-300 hover:bg-yellow-600 hover:border-yellow-600 hover:text-gray-900 rounded-full px-6 py-3 transition-all duration-300 hover:scale-105"
+                className="bg-gray-900/40 backdrop-blur-md border-gray-600/40 text-gray-300 hover:bg-yellow-600 hover:border-yellow-600 hover:text-gray-900 rounded-full px-6 py-3 transition-all duration-300 hover:scale-105"
               >
                 {category}
               </Button>
@@ -258,7 +258,7 @@ const Blog = () => {
           {/* Blog Posts Grid */}
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
             {blogPosts.map((post) => (
-              <article key={post.id} className="group bg-gradient-to-br from-gray-800/30 to-gray-900/30 backdrop-blur-sm rounded-xl border border-gray-700/30 overflow-hidden hover:border-yellow-600/30 transition-all duration-500 hover:transform hover:scale-[1.02] cursor-pointer">
+              <article key={post.id} className="group bg-gray-900/30 backdrop-blur-md rounded-xl border border-gray-700/30 overflow-hidden hover:border-yellow-600/40 transition-all duration-500 hover:transform hover:scale-[1.02] cursor-pointer">
                 <div className="relative overflow-hidden">
                   <img 
                     src={post.image} 
@@ -308,7 +308,7 @@ const Blog = () => {
 
           {/* Load More Button */}
           <div className="text-center mt-16">
-            <Button className="bg-transparent border-2 border-gray-600 text-gray-300 hover:bg-yellow-600 hover:border-yellow-600 hover:text-gray-900 px-8 py-3 rounded-full transition-all duration-300 hover:scale-105">
+            <Button className="bg-transparent border-2 border-gray-600/50 text-gray-300 hover:bg-yellow-600 hover:border-yellow-600 hover:text-gray-900 px-8 py-3 rounded-full transition-all duration-300 hover:scale-105 backdrop-blur-md">
               Load More Articles
             </Button>
           </div>

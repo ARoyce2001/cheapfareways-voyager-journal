@@ -3,8 +3,31 @@ import { Button } from "@/components/ui/button";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import { Calendar, Clock, ArrowRight, User, Eye } from "lucide-react";
+import { Carousel, CarouselContent, CarouselItem } from "@/components/ui/carousel";
+import { useEffect, useState } from "react";
 
 const Blog = () => {
+  const [api, setApi] = useState<any>();
+
+  // Auto-play slideshow
+  useEffect(() => {
+    if (!api) return;
+
+    const interval = setInterval(() => {
+      api.scrollNext();
+    }, 4000);
+
+    return () => clearInterval(interval);
+  }, [api]);
+
+  const slideshowImages = [
+    "https://images.unsplash.com/photo-1469474968028-56623f02e42e?w=1920&h=800&fit=crop&crop=center",
+    "https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=1920&h=800&fit=crop&crop=center",
+    "https://images.unsplash.com/photo-1470071459604-3b5ec3a7fe05?w=1920&h=800&fit=crop&crop=center",
+    "https://images.unsplash.com/photo-1482938289607-e9573fc25ebb?w=1920&h=800&fit=crop&crop=center",
+    "https://images.unsplash.com/photo-1433086966358-54859d0ed716?w=1920&h=800&fit=crop&crop=center"
+  ];
+
   const featuredPost = {
     id: 1,
     title: "Top 10 Budget Travel Destinations in India for 2025",
@@ -18,7 +41,7 @@ const Blog = () => {
     views: "2.3k"
   };
 
-  const categories = ["Adventure", "Budget Travel", "Culture", "Food & Drink", "Travel Guides", "Photography", "Solo Travel"];
+  const categories = ["Adventure", "Budget Travel", "Culture", "Food & Drink", "Travel Guides", "Photography", "Solo Travel", "Wildlife"];
 
   const blogPosts = [
     {
@@ -102,7 +125,7 @@ const Blog = () => {
       id: 9,
       title: "Monsoon Magic: Best Places to Visit During Rains",
       excerpt: "Embrace the monsoon season with our guide to India's most beautiful destinations that come alive during the rains.",
-      image: "https://images.unsplash.com/photo-1469474968028-56623f02e42e?w=800&h=400&fit=crop&crop=center",
+      image: "https://images.unsplash.com/photo-1470071459604-3b5ec3a7fe05?w=800&h=400&fit=crop&crop=center",
       date: "April 25, 2025",
       category: "Travel Guides",
       readTime: "8 min read",
@@ -141,6 +164,72 @@ const Blog = () => {
       readTime: "12 min read",
       author: "Deepak Sharma",
       views: "2.9k"
+    },
+    {
+      id: 13,
+      title: "Wildlife Sanctuaries: India's Natural Treasures",
+      excerpt: "Discover India's incredible wildlife through national parks and sanctuaries, from tigers in Ranthambore to elephants in Periyar.",
+      image: "https://images.unsplash.com/photo-1472396961693-142e6e269027?w=800&h=400&fit=crop&crop=center",
+      date: "April 15, 2025",
+      category: "Wildlife",
+      readTime: "14 min read",
+      author: "Dr. Pradeep Nair",
+      views: "3.4k"
+    },
+    {
+      id: 14,
+      title: "Luxury on a Budget: India's Best Value Resorts",
+      excerpt: "Experience luxury without breaking the bank with our guide to India's most affordable yet luxurious resorts and hotels.",
+      image: "https://images.unsplash.com/photo-1509316975850-ff9c5deb0cd9?w=800&h=400&fit=crop&crop=center",
+      date: "April 12, 2025",
+      category: "Budget Travel",
+      readTime: "10 min read",
+      author: "Sneha Kapoor",
+      views: "2.8k"
+    },
+    {
+      id: 15,
+      title: "Ancient Temples and Spiritual Journeys",
+      excerpt: "Embark on a spiritual journey through India's most sacred temples and ancient spiritual sites with historical insights.",
+      image: "https://images.unsplash.com/photo-1513836279014-a89f7a76ae86?w=800&h=400&fit=crop&crop=center",
+      date: "April 10, 2025",
+      category: "Culture",
+      readTime: "18 min read",
+      author: "Swami Anand",
+      views: "4.1k"
+    },
+    {
+      id: 16,
+      title: "Hill Stations: Escape to the Cool Mountains",
+      excerpt: "Beat the heat with our comprehensive guide to India's most beautiful hill stations, from Shimla to Ooty.",
+      image: "https://images.unsplash.com/photo-1426604966848-d7adac402bff?w=800&h=400&fit=crop&crop=center",
+      date: "April 8, 2025",
+      category: "Travel Guides",
+      readTime: "13 min read",
+      author: "Aditya Sharma",
+      views: "3.7k"
+    },
+    {
+      id: 17,
+      title: "Train Travel Guide: Exploring India by Rail",
+      excerpt: "Master the art of train travel in India with tips on booking, classes, routes, and making the most of your railway journey.",
+      image: "https://images.unsplash.com/photo-1523712999610-f77fbcfc3843?w=800&h=400&fit=crop&crop=center",
+      date: "April 5, 2025",
+      category: "Travel Guides",
+      readTime: "15 min read",
+      author: "Rohit Gupta",
+      views: "4.6k"
+    },
+    {
+      id: 18,
+      title: "Yoga Retreats: Find Your Inner Peace",
+      excerpt: "Discover the best yoga retreats across India, from Rishikesh ashrams to Kerala wellness centers for mind, body, and soul.",
+      image: "https://images.unsplash.com/photo-1500375592092-40eb2168fd21?w=800&h=400&fit=crop&crop=center",
+      date: "April 3, 2025",
+      category: "Culture",
+      readTime: "11 min read",
+      author: "Yoga Guru Priya",
+      views: "2.9k"
     }
   ];
 
@@ -148,15 +237,23 @@ const Blog = () => {
     <div className="min-h-screen bg-black text-white">
       <Header />
       
-      {/* Hero Section */}
+      {/* Hero Section with Slideshow */}
       <section className="relative bg-black text-white overflow-hidden py-24">
         <div className="absolute inset-0">
-          <img 
-            src="https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=1920&h=800&fit=crop&crop=center"
-            alt="India's Hidden Gems"
-            className="w-full h-full object-cover opacity-15"
-          />
-          <div className="absolute inset-0 bg-black/80 backdrop-blur-sm"></div>
+          <Carousel setApi={setApi} className="w-full h-full">
+            <CarouselContent className="w-full h-full">
+              {slideshowImages.map((image, index) => (
+                <CarouselItem key={index} className="w-full h-full p-0">
+                  <img 
+                    src={image}
+                    alt={`Travel destination ${index + 1}`}
+                    className="w-full h-full object-cover"
+                  />
+                </CarouselItem>
+              ))}
+            </CarouselContent>
+          </Carousel>
+          <div className="absolute inset-0 bg-black/75 backdrop-blur-sm"></div>
         </div>
         
         <div className="relative z-10 container mx-auto px-4 text-center">

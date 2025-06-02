@@ -1,4 +1,3 @@
-
 import { useState } from "react";
 import { Button } from "@/components/ui/button";
 import { ChevronDown } from "lucide-react";
@@ -8,7 +7,7 @@ const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
   return (
-    <header className="bg-gray-900 shadow-xl sticky top-0 z-50 border-b border-gray-800">
+    <header className="bg-black shadow-xl sticky top-0 z-50 border-b border-gray-800">
       <div className="container mx-auto px-4 py-6">
         <div className="flex items-center justify-between">
           {/* Centered Logo with Text */}

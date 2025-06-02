@@ -25,7 +25,7 @@ const Blog = () => {
       id: 2,
       title: "A Trekker's Guide to India's Best Mountain Trails",
       excerpt: "Explore the most breathtaking mountain trails across the Himalayas, Western Ghats, and Eastern ranges with detailed guides and safety tips.",
-      image: "https://images.unsplash.com/photo-1464822759844-d150baec93c5?w=800&h=400&fit=crop&crop=center",
+      image: "https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=800&h=400&fit=crop&crop=center",
       date: "May 12, 2025",
       category: "Adventure",
       readTime: "12 min read",

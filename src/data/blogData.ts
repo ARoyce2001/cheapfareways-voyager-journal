@@ -1,6 +1,7 @@
 export interface BlogArticle {
   title: string;
   slug: string;
+  excerpt: string; // Added excerpt field
   content: string;
   seoTitle: string;
   metaDescription: string;
@@ -15,6 +16,7 @@ export const blogArticles: BlogArticle[] = [
   {
     title: "India’s Wildlife Sanctuaries: Discover the Best National Parks for a Safari Adventure",
     slug: "india-wildlife-national-parks",
+    excerpt: "India's national parks offer unparalleled opportunities to witness majestic tigers, elusive leopards, and gentle elephants in their natural habitats. This guide explores the best wildlife sanctuaries for an unforgettable safari adventure.",
     content: `India is more than just a land of cultures and colors — it’s a vast wilderness filled with exotic creatures and breathtaking landscapes. For wildlife enthusiasts and adventure seekers, India's national parks and wildlife sanctuaries offer unparalleled opportunities to witness majestic tigers, elusive leopards, gentle elephants, and a myriad of vibrant bird species in their natural habitats. This guide will take you through some of the best national parks in India, helping you plan your next unforgettable safari adventure.
 
 **1. Ranthambore National Park, Rajasthan**
@@ -51,6 +53,7 @@ When planning your Indian wildlife safari, consider the best time to visit (typi
   {
     title: "Himalayan Treks for Beginners: Your First Steps into Mountain Majesty",
     slug: "himalayan-treks-for-beginners",
+    excerpt: "New to trekking? Discover beginner-friendly Himalayan treks in India that offer stunning views and a perfect introduction to mountain exploration, ensuring a safe and unforgettable adventure.",
     content: `The Himalayas, a majestic expanse of snow-capped peaks and serene valleys, beckon adventurers from across the globe. For those new to trekking, the idea of scaling these giants might seem daunting. However, several beginner-friendly treks in the Indian Himalayas offer a perfect introduction to the beauty and challenge of mountain exploration, without requiring extensive prior experience. This guide will walk you through some of the best Himalayan treks for beginners, ensuring your first foray into the mountains is safe, enjoyable, and unforgettable.
 
 **1. Kedarkantha Trek, Uttarakhand**
@@ -93,6 +96,7 @@ Embarking on a Himalayan trek is an experience that transforms. These beginner-f
   {
     title: "Exploring the Golden Triangle: A Classic India Itinerary for First-Timers",
     slug: "india-golden-triangle-itinerary",
+    excerpt: "The Golden Triangle connects Delhi, Agra (Taj Mahal), and Jaipur, offering first-time visitors a vibrant introduction to India's rich culture, history, and architectural marvels.",
     content: `For many first-time visitors to India, the Golden Triangle itinerary serves as the perfect introduction to the country's vibrant culture, rich history, and architectural marvels. This popular circuit connects three iconic cities – Delhi, Agra, and Jaipur – each offering a unique glimpse into India's diverse heritage. This guide will help you plan your Golden Triangle adventure, ensuring you experience the best of this classic Indian journey.
 
 **What is the Golden Triangle?**
@@ -144,6 +148,7 @@ The Golden Triangle provides a captivating glimpse into India's soul. It's a jou
   {
     title: "South India's Hidden Gems: Beyond the Backwaters and Beaches",
     slug: "south-india-hidden-gems",
+    excerpt: "Go beyond the popular tourist trails to uncover South India's hidden gems: ancient ruins, French colonial charm, misty hills, and unique ecosystems awaiting discovery.",
     content: `While Kerala's serene backwaters and Goa's lively beaches are undoubtedly captivating, South India is a vast tapestry of diverse landscapes, ancient traditions, and lesser-known treasures waiting to be discovered. Venture beyond the popular tourist trails, and you'll uncover a side of South India rich in unique cultural experiences, pristine natural beauty, and profound historical significance. This guide highlights some of South India's hidden gems, inviting you to explore its unexplored wonders.
 
 **1. Hampi, Karnataka – The Vijayanagara Ruins**
@@ -180,6 +185,7 @@ Exploring South India's hidden gems requires a willingness to venture off the be
   {
     title: "Rajasthan's Desert Forts and Palaces: A Royal Journey Through History",
     slug: "rajasthan-desert-forts-palaces",
+    excerpt: "Embark on a royal journey through Rajasthan, the 'Land of Kings.' Explore majestic forts and opulent palaces in Jaipur, Udaipur, Jodhpur, and Jaisalmer, delving into India's vibrant history.",
     content: `Rajasthan, the "Land of Kings," conjures images of majestic forts, opulent palaces, and vibrant traditions. This northwestern Indian state is a living testament to a glorious past, where tales of valor, romance, and grandeur echo through its sandstone structures. A journey through Rajasthan's desert forts and palaces is a royal immersion into India's rich history and architectural brilliance. This guide will take you through some of its most iconic royal destinations.
 
 **1. Jaipur – The Pink City's Royal Legacy**
@@ -229,6 +235,7 @@ A journey through Rajasthan's desert forts and palaces is more than just sightse
   {
     title: "Spiritual India: A Journey to the Sacred Sites and Ashrams",
     slug: "spiritual-india-sacred-sites-ashrams",
+    excerpt: "Explore India's profound spirituality through its ancient temples, serene ashrams, and vibrant pilgrimage sites like Varanasi, Rishikesh, and Amritsar, connecting with ancient wisdom and devotion.",
     content: `India, the birthplace of Hinduism, Buddhism, Jainism, and Sikhism, is a land deeply rooted in spirituality. Its ancient temples, serene ashrams, sacred rivers, and vibrant pilgrimage sites have drawn seekers for millennia. A spiritual journey through India is an opportunity to connect with ancient wisdom, find inner peace, and witness the profound devotion that permeates daily life. This guide outlines some of the most significant spiritual destinations and experiences India has to offer.
 
 **1. Varanasi, Uttar Pradesh – The Spiritual Capital**
@@ -287,6 +294,7 @@ A spiritual journey through India is more than just a trip; it’s an inner expl
   {
     title: "North East India Offbeat: Discover the Uncharted Beauty of the Seven Sisters",
     slug: "north-east-india-offbeat-travel",
+    excerpt: "Discover the untouched beauty of North East India. This offbeat guide explores misty mountains, unique cultures, and serene landscapes of the Seven Sisters states, perfect for adventurous travelers.",
     content: `North East India, comprising the "Seven Sister" states and Sikkim, is a land of unparalleled natural beauty, diverse indigenous cultures, and mystical allure. Often overlooked by mainstream tourism, this region offers an authentic and offbeat travel experience for those seeking untouched landscapes, unique traditions, and serene tranquility. From misty mountains and cascading waterfalls to vibrant tribal villages and rich biodiversity, North East India is a treasure trove waiting to be discovered.
 
 **1. Ziro Valley, Arunachal Pradesh – A Cultural Hotspot**
@@ -347,6 +355,7 @@ Embarking on an offbeat journey through North East India is an adventure of a li
   {
     title: "Goa Beyond the Beaches: Exploring the Culture, History, and Hinterlands",
     slug: "goa-beyond-beaches",
+    excerpt: "Discover Goa's rich history, unique Indo-Portuguese culture, and lush hinterlands away from the bustling beaches. Explore Old Goa, spice plantations, and serene temples for a deeper understanding of this diverse state.",
     content: `Goa is synonymous with sun-kissed beaches, vibrant nightlife, and a relaxed, bohemian vibe. While its coastal charm is undeniable, there’s a whole other side to Goa waiting to be explored – a rich tapestry of history, a unique Indo-Portuguese culture, lush green hinterlands, and serene spiritual sites. Venture beyond the popular shores, and you’ll discover the soul of Goa, far from the tourist crowds.
 
 **1. Old Goa (Velha Goa) – Echoes of a Golden Era**
@@ -409,6 +418,7 @@ Goa offers a multifaceted experience that extends far beyond its famous coastlin
   {
     title: "Exploring the Ancient Caves of India: A Journey Through Art and Spirituality",
     slug: "india-ancient-caves",
+    excerpt: "Journey through India's ancient cave systems, from the Buddhist masterpieces of Ajanta and Ellora to the Hindu temples of Badami, witnessing centuries of art, architecture, and spiritual devotion.",
     content: `India's rich history is carved into its very bedrock, nowhere more vividly than in its ancient cave systems. These remarkable sites, often serving as sanctuaries for early religious movements, offer a profound glimpse into the artistic, architectural, and spiritual advancements of ancient Indian civilizations. From Buddhist monasteries to Hindu temples, these caves are a testament to human devotion and ingenuity. This guide explores some of India's most significant ancient cave complexes.
 
 **1. Ajanta Caves, Maharashtra – Buddhist Masterpieces**
@@ -469,4 +479,3 @@ Exploring India's ancient caves is a journey into the heart of its civilizationa
     }
   }
 ];
-

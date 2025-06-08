@@ -1,11 +1,11 @@
 import { useRouter } from 'next/router';
-import { blogArticles } from '../../data/blogData';
+import { allBlogPosts } from '../../data/allBlogPosts';
 
 export default function BlogPost() {
   const router = useRouter();
   const { slug } = router.query;
 
-  const article = blogArticles.find(post => post.slug === slug);
+  const article = allBlogPosts.find(post => post.slug === slug);
 
   if (!article) return <p>Loading...</p>;
 

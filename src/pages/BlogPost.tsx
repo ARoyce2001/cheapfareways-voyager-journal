@@ -39,7 +39,7 @@ const BlogPost = () => {
       <section className="relative py-20">
         <div className="absolute inset-0">
           <img 
-            src={article.image}
+            src={article.image || "https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=800&h=400&fit=crop&crop=center"}
             alt={article.title}
             className="w-full h-full object-cover"
           />
@@ -50,15 +50,15 @@ const BlogPost = () => {
           <div className="max-w-4xl mx-auto text-center">
             <div className="flex items-center justify-center gap-4 text-sm text-gray-300 mb-6">
               <span className="px-3 py-1 bg-yellow-600/30 backdrop-blur-md rounded-full border border-yellow-600/50">
-                {article.category}
+                {article.category || "Travel"}
               </span>
               <div className="flex items-center gap-1">
                 <Calendar className="w-4 h-4" />
-                <span>{article.date}</span>
+                <span>{article.date || "Recent"}</span>
               </div>
               <div className="flex items-center gap-1">
                 <Clock className="w-4 h-4" />
-                <span>{article.readTime}</span>
+                <span>{article.readTime || "5 min read"}</span>
               </div>
             </div>
             
@@ -72,7 +72,7 @@ const BlogPost = () => {
             
             <div className="flex items-center justify-center gap-2 text-gray-400">
               <User className="w-4 h-4" />
-              <span>By {article.author}</span>
+              <span>By {article.author || "Travel Expert"}</span>
             </div>
           </div>
         </div>

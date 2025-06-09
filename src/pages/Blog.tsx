@@ -1,4 +1,3 @@
-
 import { Button } from "@/components/ui/button";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
@@ -38,7 +37,8 @@ const Blog = () => {
     location: "India",
     readTime: "8 min read",
     author: "Priya Sharma",
-    views: "2.3k"
+    views: "2.3k",
+    slug: "top-10-budget-travel-destinations-india-2025"
   };
 
   const categories = ["Adventure", "Budget Travel", "Culture", "Food & Drink", "Travel Guides", "Photography", "Solo Travel", "Wildlife"];
@@ -53,7 +53,8 @@ const Blog = () => {
       category: "Adventure",
       readTime: "12 min read",
       author: "Arjun Patel",
-      views: "1.8k"
+      views: "1.8k",
+      slug: "trekkers-guide-india-mountain-trails"
     },
     {
       id: 3,
@@ -64,7 +65,8 @@ const Blog = () => {
       category: "Travel Guides",
       readTime: "10 min read",
       author: "Neha Gupta",
-      views: "3.1k"
+      views: "3.1k",
+      slug: "india-top-five-scenic-road-trips"
     },
     {
       id: 4,
@@ -75,7 +77,8 @@ const Blog = () => {
       category: "Travel Guides",
       readTime: "6 min read",
       author: "Rohit Singh",
-      views: "1.2k"
+      views: "1.2k",
+      slug: "smart-travel-best-apps-2025"
     },
     {
       id: 5,
@@ -86,7 +89,8 @@ const Blog = () => {
       category: "Travel Guides",
       readTime: "15 min read",
       author: "Kavya Reddy",
-      views: "4.2k"
+      views: "4.2k",
+      slug: "ultimate-guide-india-beach-destinations"
     },
     {
       id: 6,
@@ -97,7 +101,8 @@ const Blog = () => {
       category: "Food & Drink",
       readTime: "9 min read",
       author: "Vikram Kumar",
-      views: "2.7k"
+      views: "2.7k",
+      slug: "street-food-adventures-delhi-mumbai"
     },
     {
       id: 7,
@@ -108,7 +113,8 @@ const Blog = () => {
       category: "Photography",
       readTime: "11 min read",
       author: "Anisha Das",
-      views: "1.9k"
+      views: "1.9k",
+      slug: "photography-guide-capturing-india-festivals"
     },
     {
       id: 8,
@@ -119,7 +125,8 @@ const Blog = () => {
       category: "Solo Travel",
       readTime: "13 min read",
       author: "Meera Joshi",
-      views: "3.8k"
+      views: "3.8k",
+      slug: "solo-female-travel-india-safety-guide"
     },
     {
       id: 9,
@@ -130,7 +137,8 @@ const Blog = () => {
       category: "Travel Guides",
       readTime: "8 min read",
       author: "Rajesh Mehta",
-      views: "2.1k"
+      views: "2.1k",
+      slug: "monsoon-magic-best-places-visit-rains"
     },
     {
       id: 10,
@@ -141,7 +149,8 @@ const Blog = () => {
       category: "Culture",
       readTime: "14 min read",
       author: "Sanjana Iyer",
-      views: "1.6k"
+      views: "1.6k",
+      slug: "cultural-immersion-living-local-families"
     },
     {
       id: 11,
@@ -152,7 +161,8 @@ const Blog = () => {
       category: "Budget Travel",
       readTime: "16 min read",
       author: "Karan Malhotra",
-      views: "5.2k"
+      views: "5.2k",
+      slug: "budget-backpacking-1000-rupees-per-day"
     },
     {
       id: 12,
@@ -163,7 +173,8 @@ const Blog = () => {
       category: "Adventure",
       readTime: "12 min read",
       author: "Deepak Sharma",
-      views: "2.9k"
+      views: "2.9k",
+      slug: "adventure-sports-india-ultimate-guide"
     },
     {
       id: 13,
@@ -174,7 +185,8 @@ const Blog = () => {
       category: "Wildlife",
       readTime: "14 min read",
       author: "Dr. Pradeep Nair",
-      views: "3.4k"
+      views: "3.4k",
+      slug: "wildlife-sanctuaries-india-natural-treasures"
     },
     {
       id: 14,
@@ -185,7 +197,8 @@ const Blog = () => {
       category: "Budget Travel",
       readTime: "10 min read",
       author: "Sneha Kapoor",
-      views: "2.8k"
+      views: "2.8k",
+      slug: "luxury-budget-india-best-value-resorts"
     },
     {
       id: 15,
@@ -196,7 +209,8 @@ const Blog = () => {
       category: "Culture",
       readTime: "18 min read",
       author: "Swami Anand",
-      views: "4.1k"
+      views: "4.1k",
+      slug: "ancient-temples-spiritual-journeys"
     },
     {
       id: 16,
@@ -207,7 +221,8 @@ const Blog = () => {
       category: "Travel Guides",
       readTime: "13 min read",
       author: "Aditya Sharma",
-      views: "3.7k"
+      views: "3.7k",
+      slug: "hill-stations-escape-cool-mountains"
     },
     {
       id: 17,
@@ -218,7 +233,8 @@ const Blog = () => {
       category: "Travel Guides",
       readTime: "15 min read",
       author: "Rohit Gupta",
-      views: "4.6k"
+      views: "4.6k",
+      slug: "train-travel-guide-exploring-india-rail"
     },
     {
       id: 18,
@@ -229,9 +245,14 @@ const Blog = () => {
       category: "Culture",
       readTime: "11 min read",
       author: "Yoga Guru Priya",
-      views: "2.9k"
+      views: "2.9k",
+      slug: "yoga-retreats-find-inner-peace"
     }
   ];
+
+  const handleArticleClick = (slug: string) => {
+    window.open(`/blog/${slug}`, '_blank');
+  };
 
   return (
     <div className="min-h-screen bg-black text-white">
@@ -278,7 +299,10 @@ const Blog = () => {
             <h2 className="text-3xl font-light text-white">Featured Article</h2>
           </div>
           
-          <div className="group bg-gray-900/40 backdrop-blur-md rounded-2xl border border-gray-700/40 overflow-hidden hover:border-yellow-600/40 transition-all duration-500 hover:transform hover:scale-[1.02]">
+          <div 
+            className="group bg-gray-900/40 backdrop-blur-md rounded-2xl border border-gray-700/40 overflow-hidden hover:border-yellow-600/40 transition-all duration-500 hover:transform hover:scale-[1.02] cursor-pointer"
+            onClick={() => handleArticleClick(featuredPost.slug)}
+          >
             <div className="flex flex-col lg:flex-row">
               <div className="lg:w-1/2 relative overflow-hidden">
                 <img 
@@ -355,7 +379,11 @@ const Blog = () => {
           {/* Blog Posts Grid */}
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
             {blogPosts.map((post) => (
-              <article key={post.id} className="group bg-gray-900/30 backdrop-blur-md rounded-xl border border-gray-700/30 overflow-hidden hover:border-yellow-600/40 transition-all duration-500 hover:transform hover:scale-[1.02] cursor-pointer">
+              <article 
+                key={post.id} 
+                className="group bg-gray-900/30 backdrop-blur-md rounded-xl border border-gray-700/30 overflow-hidden hover:border-yellow-600/40 transition-all duration-500 hover:transform hover:scale-[1.02] cursor-pointer"
+                onClick={() => handleArticleClick(post.slug)}
+              >
                 <div className="relative overflow-hidden">
                   <img 
                     src={post.image} 

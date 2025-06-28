@@ -9,7 +9,12 @@ import { Button } from '@/components/ui/button';
 const BlogPost = () => {
   const { slug } = useParams();
   
+  console.log('Current slug:', slug);
+  console.log('Available posts:', allBlogPosts.map(post => post.slug));
+  
   const article = allBlogPosts.find(post => post.slug === slug);
+
+  console.log('Found article:', article);
 
   if (!article) {
     return (
@@ -83,35 +88,30 @@ const BlogPost = () => {
         <div className="container mx-auto px-4">
           <div className="max-w-4xl mx-auto">
             <article className="prose prose-invert prose-lg max-w-none">
-              {article.content ? (
-                article.content.split('\n').map((paragraph, index) => (
-                  <p key={index} className="text-gray-300 leading-relaxed mb-6">
-                    {paragraph}
-                  </p>
-                ))
-              ) : (
-                <div className="text-gray-300 leading-relaxed space-y-6">
-                  <p>Welcome to this comprehensive guide about {article.title.toLowerCase()}. This article will provide you with detailed insights and practical information to enhance your travel experience.</p>
+              <div className="text-gray-300 leading-relaxed space-y-6">
+                {article.content.split('\n\n').map((paragraph, index) => {
+                  // Handle headers (lines starting with **)
+                  if (paragraph.startsWith('**') && paragraph.endsWith('**')) {
+                    const headerText = paragraph.slice(2, -2);
+                    return (
+                      <h2 key={index} className="text-2xl font-light text-yellow-300 mt-8 mb-4">
+                        {headerText}
+                      </h2>
+                    );
+                  }
                   
-                  <p>India offers incredible diversity in its landscapes, cultures, and experiences. Whether you're seeking adventure in the mountains, relaxation on pristine beaches, or cultural immersion in ancient cities, this guide will help you make the most of your journey.</p>
+                  // Handle regular paragraphs
+                  if (paragraph.trim()) {
+                    return (
+                      <p key={index} className="mb-6">
+                        {paragraph}
+                      </p>
+                    );
+                  }
                   
-                  <p>Our expert recommendations are based on extensive research and firsthand experience, ensuring you get authentic and reliable information for your travels.</p>
-                  
-                  <h2 className="text-2xl font-light text-yellow-300 mt-8 mb-4">Key Highlights</h2>
-                  
-                  <p>This destination offers unique experiences that cater to different types of travelers. From budget-conscious backpackers to luxury seekers, there's something special waiting for everyone.</p>
-                  
-                  <p>The local culture is rich and welcoming, with traditions that have been preserved for centuries. You'll have opportunities to interact with locals, taste authentic cuisine, and participate in cultural activities.</p>
-                  
-                  <h2 className="text-2xl font-light text-yellow-300 mt-8 mb-4">Practical Information</h2>
-                  
-                  <p>Planning is essential for a successful trip. Consider factors like weather, local customs, transportation options, and accommodation preferences when preparing for your journey.</p>
-                  
-                  <p>Safety should always be a priority. Stay informed about local conditions, keep important documents secure, and maintain communication with family or friends about your whereabouts.</p>
-                  
-                  <p>We hope this guide helps you create unforgettable memories and encourages you to explore more of what this incredible destination has to offer.</p>
-                </div>
-              )}
+                  return null;
+                })}
+              </div>
             </article>
             
             {/* Back Button */}

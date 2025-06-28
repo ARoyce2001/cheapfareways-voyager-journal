@@ -2,7 +2,7 @@
 import { blogArticles } from './blogData';
 
 // Transform blogArticles to match the expected structure for the blog components
-export const allBlogPosts = blogArticles.map(article => ({
+export const allBlogPosts = blogArticles.map((article, index) => ({
   id: article.slug,
   slug: article.slug,
   title: article.title,
@@ -17,3 +17,6 @@ export const allBlogPosts = blogArticles.map(article => ({
   metaDescription: article.metaDescription,
   keywords: article.keywords
 }));
+
+console.log('Total blog posts loaded:', allBlogPosts.length);
+console.log('Blog post slugs:', allBlogPosts.map(post => post.slug));
